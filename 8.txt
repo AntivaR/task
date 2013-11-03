@@ -1,0 +1,70 @@
+﻿# -*- coding: utf-8 -*-
+
+while True:
+    main_menu = u"+---------------------------------------Головне меню---------------------------------+\n" \
+                u"|  [1]. Завдання 1. Вивести на екран таблицю переведення миль у кілометри .          |\n" \
+                u"|  [2]. Завдання 2. Знайти суму модулів.                                             |\n" \
+                u"|  [3]. Завдання 3. Обчислити суму.                                                  |\n" \
+                u"|  [4]. Завдання 4. Вивести повний текст пісні на екран.                             |\n" \
+                u"|  [5]. Завдання 5. Задача з  шахівницею.                                            |\n" \
+                u"|  [6]. Завдання 6. Анімований текстовий індикатор виконання.                        |\n" \
+                u"|  [7]. Завдання 7. Знайдіть всі прості числа в діапазоні від 2 до 100.              |\n" \
+                u"|  [8]. Завершити програму.                                                          |\n" \
+                u"+------------------------------------------------------------------------------------+"
+
+    print main_menu
+    punkt_menu = input(u"введіть номер пункту меню: ")
+    if punkt_menu == 1:
+        km = 1.609344
+        miles = 1
+        for miles in range(1, 21):
+            x = km * miles
+            print"+-----------------------------+"
+            print"|", miles, u"миль =", x, u'км'
+
+
+    elif punkt_menu == 2:
+        x = input(u"введіть кількість чисел :")
+        sum = 0
+        for i in range(x):
+            chisla = input(u"введіть число :")
+            sum += abs(chisla)
+        else:
+            print u"сумма модулів всіх чисел =", round(1.0 * sum)
+
+    elif punkt_menu == 3:
+        pass
+
+
+    elif punkt_menu == 4:
+        b = 10
+        while b > 0:
+            print b, " green bottles hanging on the wall, "
+            print b, " green bottles hanging on the wall,"
+            print "And if one green bottle should accidentally fall,"
+            print "There’ll be", b - 1, "green bottles hanging on the wall."
+            print
+            b -= 1
+
+    elif punkt_menu == 5:
+        kletka = 1
+        zernun = 1
+        while kletka < 65:
+            i = zernun * 2
+            print u"за", kletka, u"клітку", "=", zernun
+            zernun = i
+            kletka += 1
+
+
+    elif punkt_menu == 6:
+        pass
+
+    elif punkt_menu == 7:
+        pass
+
+    elif punkt_menu == 8:
+        break
+
+    else:
+        print u"Такого пункту не існує(\n" \
+              u"Спробуйте ще раз"
